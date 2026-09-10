@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+
+/* Header */
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: #ffffff;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-weight: 600;
+}
+
+
+nav a:hover {
+    color: #4263eb;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #ffffff
+        );
+}
+
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.small-title {
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+    color: #4263eb;
+}
+
+
+h1 {
+    font-size: 56px;
+
+    margin-bottom: 20px;
+}
+
+
+.description {
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #5b6475;
+
+    margin-bottom: 30px;
+}
+
+
+button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 8px;
+
+    background: #4263eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(66, 99, 235, 0.3);
+}
+
+
+#statusMessage {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+
+/* Technology */
+
+.technology {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.technology h2,
+.status-section h2 {
+    font-size: 34px;
+
+    margin-bottom: 45px;
+}
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+    padding: 35px 25px;
+
+    border-radius: 15px;
+
+    background: #f8f9ff;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+.icon {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+
+.card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color: #687386;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    border-radius: 20px;
+
+    background: #d3f9d8;
+
+    color: #2b8a3e;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* Architecture */
+
+.status-section {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: #f4f7fb;
+}
+
+
+.architecture {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.architecture-box {
+    width: 170px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.architecture-box strong {
+    display: block;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.architecture-box span {
+    color: #687386;
+}
+
+
+.arrow {
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #172033;
+
+    color: white;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps Deployment Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🚀 DevOpsHub
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#technology">Technology</a>
+        <a href="#status">Status</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                JAVA • DOCKER • KUBERNETES
+            </p>
+
+            <h1>
+                DevOps Deployment Hub
+            </h1>
+
+            <p class="description">
+                A Java Spring Boot application deployed using
+                Docker containers and Kubernetes.
+            </p>
+
+            <button onclick="checkStatus()">
+                Check Application Status
+            </button>
+
+            <p id="statusMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <section id="technology" class="technology">
+
+        <h2>Deployment Technology</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">☕</div>
+
+                <h3>Java</h3>
+
+                <p>
+                    Spring Boot application providing
+                    the backend API and web application.
+                </p>
+
+                <span class="badge">
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🐳</div>
+
+                <h3>Docker</h3>
+
+                <p>
+                    Application packaged as a Docker
+                    image and executed inside a container.
+                </p>
+
+                <span class="badge">
+                    READY
+                </span>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">☸️</div>
+
+                <h3>Kubernetes</h3>
+
+                <p>
+                    Docker container deployed and managed
+                    using Kubernetes Pods and Services.
+                </p>
+
+                <span class="badge">
+                    READY
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="status" class="status-section">
+
+        <h2>Application Architecture</h2>
+
+        <div class="architecture">
+
+            <div class="architecture-box">
+                <strong>Java</strong>
+                <span>Spring Boot</span>
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="architecture-box">
+                <strong>Docker</strong>
+                <span>Container</span>
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="architecture-box">
+                <strong>Kubernetes</strong>
+                <span>Pod</span>
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="architecture-box">
+                <strong>Browser</strong>
+                <span>Application</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Java Kubernetes Demo • DevOps Learning Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
