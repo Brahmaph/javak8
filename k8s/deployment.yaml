@@ -34,6 +34,41 @@ spec:
               memory: "128Mi"
               cpu: "100m"
 
+            limits:apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: javak8
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: javak8
+
+  template:
+    metadata:
+      labels:
+        app: javak8
+
+    spec:
+      containers:
+        - name: javak8
+
+          image: brahma999/javak8:v1
+
+          ports:
+            - containerPort: 8080
+
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+
             limits:
+              memory: "512Mi"
+              cpu: "500m"
+
               memory: "512Mi"
               cpu: "500m"
