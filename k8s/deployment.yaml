@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: javak8s:v1
+  name: javak8:v1
 
 spec:
 
@@ -10,21 +10,21 @@ spec:
 
   selector:
     matchLabels:
-      app: javak8s:v1
+      app: javak8:v1
 
   template:
 
     metadata:
       labels:
-        app: javak8s:v1
+        app: javak8:v1
 
     spec:
 
       containers:
 
-        - name: javak8s:v1
+        - name: javak8:v1
 
-          image: brahma999/javak8s:v1
+          image: brahma999/javak8:v1
 
           ports:
             - containerPort: 8080
