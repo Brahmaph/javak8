@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: java-k8s-demo
+  name: javak8s:v1
 
 spec:
 
@@ -10,21 +10,21 @@ spec:
 
   selector:
     matchLabels:
-      app: java-k8s-demo
+      app: javak8s:v1
 
   template:
 
     metadata:
       labels:
-        app: java-k8s-demo
+        app: javak8s:v1
 
     spec:
 
       containers:
 
-        - name: java-k8s-demo
+        - name: javak8s:v1
 
-          image: YOUR_DOCKERHUB_USERNAME/java-k8s-demo:v1
+          image: brahma999/javak8s:v1
 
           ports:
             - containerPort: 8080
