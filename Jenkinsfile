@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    tools {
+        maven 'Maven-3.9.11'
+    }
+
     environment {
         DOCKER_IMAGE = "brahma999/javak8"
         IMAGE_TAG = "${BUILD_NUMBER}"
@@ -13,6 +17,14 @@ pipeline {
             steps {
                 echo 'Checking out source code from GitHub...'
                 checkout scm
+            }
+        }
+
+        stage('Check Maven') {
+            steps {
+                echo 'Checking Maven installation...'
+                bat 'where mvn'
+                bat 'mvn -version'
             }
         }
 
