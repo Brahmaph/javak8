@@ -1,9 +1,11 @@
 pipeline {
-
     agent any
 
-    stages {
+    tools {
+        maven 'Maven-3.9.16'
+    }
 
+    stages {
         stage('Check Java') {
             steps {
                 bat 'java -version'
@@ -16,22 +18,6 @@ pipeline {
             }
         }
 
-        stage('Check Docker') {
-            steps {
-                bat 'docker --version'
-            }
-        }
-
-        stage('Check Kubernetes') {
-            steps {
-                bat 'kubectl version --client'
-            }
-        }
-
-        stage('Check Kubernetes Cluster') {
-            steps {
-                bat 'kubectl get nodes'
-            }
-        }
+        // your other stages...
     }
 }
