@@ -54,7 +54,9 @@ pipeline {
                 ]) {
 
                     echo 'Logging in to Docker Hub...'
-
+                    powershell '''
+                $env:DOCKER_PASSWORD | docker login -u $env:DOCKER_USERNAME --password-stdin
+            '''
                     bat 'echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin'
 
                     echo 'Pushing Docker image to Docker Hub...'
